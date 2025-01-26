@@ -1,6 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
-import baseConfig from './environmentConfig/base.config';
 
 dotenv.config();
 
@@ -16,7 +15,7 @@ dotenv.config();
  * See https://playwright.dev/docs/test-configuration.
  */
 
-const environment = process.env.env || 'local';
+const environment = process.env.env || 'prod';
 
 const baseURLs: { [key: string]: string } = {
   local: process.env.BASE_URL_LOCAL || '',
