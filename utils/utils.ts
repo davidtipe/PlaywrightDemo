@@ -42,7 +42,3 @@ export function randomNumberGenerator(length: number){
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-export async function keepBrowserOpen(){
-    await new Promise(() => {})
-}

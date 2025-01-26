@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import data from '../config/data.json';
 import { AdminPage } from '../pageObjects/AdminPage';
 import { HomePage } from '../pageObjects/HomePage';
-import { keepBrowserOpen, randomNumberGenerator, waitForElementVisible } from '../utils/utils';
+import { randomNumberGenerator, waitForElementVisible } from '../utils/utils';
 let adminPage: AdminPage;
 let homePage: HomePage;
 const roomNumber = randomNumberGenerator(3)
