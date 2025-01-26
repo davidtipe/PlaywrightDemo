@@ -38,6 +38,7 @@ test.describe('When I navigate to the home page and I click on "book this room" 
         await expect(homepage.getBookingsForm()).not.toBeVisible()
     })
 
+    // better way to handle this test is to create room through an API request, book room and delete room after
     test('and I select a date and fill form with valid credentials, then booking is confirmed', async () => {
         await waitForElementVisible(homepage.getBookThisRoomButton().first())
         const isButtonVisible = await homepage.getBookThisRoomButton().isVisible()
@@ -45,6 +46,15 @@ test.describe('When I navigate to the home page and I click on "book this room" 
         await homepage.getBookThisRoomButton().click()
 
         await homepage.navigateToMonth(futureDate)
+        let maxAttempts = 20;
+        let attempts = 0;
+        while (await homepage.getCalenderContent().first().isVisible() && attempts < maxAttempts) {
+            await homepage.getCalenderNextBtn().click()
+            attempts++;
+        }
+        if (attempts >= maxAttempts) {
+            throw new Error('Exceeded maximum attempts to navigate the calendar. Possible infinite loop.');
+        }
         await homepage.clickAndDragDates(homepage.getDaysInCalender().first(), homepage.getDaysInCalender().nth(7))
         await homepage.fillBookARoomFormAndSubmit(data.roomBookingInputValues)
         await homepage.waitForTimeOut()
