@@ -1,0 +1,55 @@
+{
+    "invalidUsername":"invalidUsername",
+    "invalidPassword":"invalidPassword",
+    "validUsername":"admin",
+    "validPassword":"password",
+    "hotelDescription": "Welcome to Shady Meadows, a delightful Bed & Breakfast nestled in the hills on Newingtonfordburyshire. A place so beautiful you will never want to leave. All our rooms have comfortable beds and we provide breakfast from the locally sourced supermarket. It is a delightful place.",
+    "formValidationMessages": [
+        "Name may not be blank",
+        "Email may not be blank",
+        "Phone may not be blank",
+        "Subject may not be blank",
+        "Message must be between 20 and 2000 characters.",
+        "Message may not be blank",
+        "Subject must be between 5 and 100 characters.",
+        "Phone must be between 11 and 21 characters."
+    ],
+    "formInputValues":
+    {
+        "name":"David",
+        "email":"playwrightDemo@gmail.com",
+        "phone":"07900000000",
+        "subject":"A test to demo Playwright automation",
+        "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "formSubmissionSuccessMsg1": "Thanks for getting in touch ",
+    "formSubmissionSuccessMsg2": "We'll get back to you about",
+    "formSubmissionSuccessMsg3": "as soon as possible.",
+
+    "roomBookingInputValues":
+    {
+        "firstName":"David",
+        "lastName": "Test",
+        "email":"playwrightDemo@gmail.com",
+        "phone":"07900000000"
+    },
+
+    "confirmationModalMessages":[
+        "Booking Successful!",
+        "Congratulations! Your booking has been confirmed for:"
+    ],
+
+    "bookingErrorMessage":"The room dates are either invalid or are already booked for one or more of the dates that you have selected.",
+
+    "createRoomErrorMsgs":[
+        "Room name must be set",
+        "must be greater than or equal to 1"
+    ],
+
+    "createRoomOptions":{
+        "randomNumber": "",
+        "roomType": "Family",
+        "boolValue":"true",
+        "price":"100"
+    }
+}
